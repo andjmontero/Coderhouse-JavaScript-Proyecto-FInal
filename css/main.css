@@ -1,0 +1,420 @@
+body {
+  font-family: "Cinzel", serif;
+  background-color: #484d5c;
+}
+
+h1 {
+  color: #e4685d;
+}
+
+h2 {
+  color: #e4685d;
+  margin: 20px;
+}
+
+h1,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+}
+
+h3.cart,
+h2 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+a.navbar-brand {
+  margin: 0%;
+}
+
+.nav-menu {
+  background-color: #31333a;
+}
+
+.card {
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  border: solid 2px #f5978e;
+  padding-bottom: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.card i.far {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: inline-block;
+  width: 5px;
+}
+
+.card i.far:hover {
+  color: #339ccc;
+}
+
+.card a {
+  color: white;
+  background-color: #339ccc;
+}
+
+i.fa-shopping-cart {
+  font-size: 30px;
+  color: white;
+}
+
+i.fa-shopping-cart:hover {
+  opacity: 0.8;
+}
+
+footer {
+  background-color: #eeb7b2;
+  height: 50px;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: #5a5a5a;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f5978e;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a.closebtn {
+  color: #31333a;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s;
+  /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/* Cart */
+h3.cart {
+  margin-bottom: 20px;
+}
+
+/* Cart item*/
+div.cart-item {
+  background-color: gray;
+  margin-bottom: 20px;
+}
+
+div.cart-item .item-info h6 {
+  color: #31333a;
+  margin-top: 5px;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+div.cart-item div.item-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.cart-item div.item-amount p {
+  margin: 0px;
+  color: #f5978e;
+}
+
+div.cart-item .img {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.cart-item .add-item:hover,
+div.cart-item .substract-item:hover {
+  color: white;
+  cursor: pointer;
+}
+
+div.cart-items {
+  padding: 0px 5px;
+  background-color: #f5978e;
+  position: absolute;
+  top: 18px;
+  right: 60px;
+  color: white;
+  border-radius: 30%;
+}
+
+.btn_add_to_cart {
+  -webkit-box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+          box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #fc8d83), to(#e4685d));
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color: #fc8d83;
+  border-radius: 6px;
+  border: 1px solid #d83526;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+}
+
+.btn_add_to_cart:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #e4685d), to(#fc8d83));
+  background: linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color: #e4685d;
+}
+
+.btn_add_to_cart:active {
+  position: relative;
+  top: 1px;
+}
+
+#clear {
+  -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
+          box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #f24537), to(#c62d1f));
+  background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  background-color: #f24537;
+  border-radius: 6px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+}
+
+#clear:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #c62d1f), to(#f24537));
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+  background-color: #c62d1f;
+}
+
+#clear:active {
+  position: relative;
+  top: 1px;
+}
+
+.purchase {
+  -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1;
+          box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #ffc477), to(#fb9e25));
+  background: linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+  background-color: #ffc477;
+  border-radius: 6px;
+  border: 1px solid #eeb44f;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+}
+
+.purchase:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #fb9e25), to(#ffc477));
+  background: linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+  background-color: #fb9e25;
+}
+
+.purchase:active {
+  position: relative;
+  top: 1px;
+}
+
+.remove-item {
+  margin-bottom: 5px;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
+  box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #f24537), to(#c62d1f));
+  background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+  background-color: #f24537;
+  border-radius: 6px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 31px;
+  text-decoration: none;
+}
+
+.remove-item:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #c62d1f), to(#f24537));
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+  background-color: #c62d1f;
+}
+
+.remove-item:active {
+  position: relative;
+  top: 1px;
+}
+
+label {
+  font-size: 20px;
+  color: #f5978e;
+}
+
+#queryList,
+.reset {
+  -webkit-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+          box-shadow: inset 0px 1px 0px 0px #bee2f9;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #63b8ee), to(#468ccf));
+  background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+  background-color: #63b8ee;
+  border-radius: 6px;
+  border: 1px solid #3866a3;
+  display: inline-block;
+  cursor: pointer;
+  color: #14396a;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #7cacde;
+}
+
+#queryList:hover,
+.reset:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #468ccf), to(#63b8ee));
+  background: linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+  background-color: #468ccf;
+}
+
+#queryList:active {
+  position: relative;
+  top: 1px;
+}
+
+input {
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  width: 100px;
+  font-weight: 800;
+}
+
+h2.main {
+  font-size: 50px;
+}
+
+h5.main {
+  color: #f5978e;
+}
+
+#productos {
+  min-height: 350px;
+}
+
+h2.no-items {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.reset {
+  font-size: 12px;
+}
+/*# sourceMappingURL=main.css.map */
